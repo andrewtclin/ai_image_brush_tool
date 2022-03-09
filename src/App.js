@@ -120,10 +120,7 @@ function App() {
   }, [labelData]);
 
   return (
-    <div
-      className="pl-24 w-full flex justify-between items-center"
-      style={{ height: "100vh" }}
-    >
+    <div className="w-full flex flex-col lg:flex-row justify-between items-center h-screen">
       <Particles
         options={particlesOptions}
         style={{
@@ -140,6 +137,7 @@ function App() {
         selectedLabelClass={selectedLabelClass}
         labelData={labelData}
         setLabelData={setLabelData}
+        setLabelClass={setLabelClass}
       />
 
       <Sidebar

@@ -1,5 +1,5 @@
 import { takeLatest, put, all, call } from "redux-saga/effects";
-import { axiosFileSystem, host, port } from "../../../apiConfig/axios";
+import { axiosFileSystem, host } from "../../../apiConfig/axios";
 
 import FileSystemActionTypes from "./fileSystem-types";
 
@@ -23,13 +23,12 @@ const uploadFileApi = async ({ file }) => {
 };
 
 const downloadDataApi = async ({ labelData }) => {
-  console.log("api:", labelData);
   await axiosFileSystem({
     method: "post",
     url: "/download_data",
     data: labelData,
   });
-  await window.open(`http://${host}:${port}/file/download_data`, "_blank");
+  await window.open(`https://${host}/file/download_data`, "_blank");
 };
 //#endregion
 

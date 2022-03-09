@@ -9,7 +9,7 @@ function Sidebar({
 }) {
   return (
     <div
-      className="border-l h-full flex flex-col items-center justify-start shadow-lg"
+      className="pb-2 border-t lg:border-l h-full w-full flex flex-col items-center justify-start shadow-lg order-1 lg:order-last"
       style={{ flex: "0.2" }}
     >
       <div className="p-4">
