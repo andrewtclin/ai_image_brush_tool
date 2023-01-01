@@ -1,0 +1,7 @@
+name: jastudio #Environment name
+dependencies:
+  - python=3.9
+  - pip:
+      - flask
+      - flask_cors
+      - gunicorn # for app deployment
